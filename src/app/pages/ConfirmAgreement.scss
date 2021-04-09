@@ -1,0 +1,21 @@
+@import "../Const.scss";
+
+.confirm-agreement-page {
+
+    word-break: break-word;
+
+    > ol {
+        padding-left: 20px;
+    }
+
+}
+
+.buttons-section {
+    
+    text-align: center;
+
+    > * {
+        margin: $globalMargin !important;
+    }
+
+}

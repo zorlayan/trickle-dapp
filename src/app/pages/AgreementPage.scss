@@ -1,0 +1,23 @@
+@import "../Const.scss";
+
+.agreement-page {
+
+    .agreement-header {
+        margin-bottom: 0;
+    }
+
+    > .buttons {
+
+        > * {
+            margin: $globalMargin;
+        }
+
+    }
+
+    .form-input {
+        > div > .rw-widget > div {
+            box-shadow: $defaultShade;
+        }
+    }
+
+}

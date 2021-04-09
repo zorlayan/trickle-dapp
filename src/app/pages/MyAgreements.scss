@@ -1,0 +1,75 @@
+@import "../Const.scss";
+$font-path: '~react-widgets/lib/fonts';
+$img-path: '~react-widgets/lib/img';
+@import '~react-widgets/lib/scss/react-widgets';
+
+.my-agreements-page {
+
+    .agreement-card {
+
+        box-shadow: $defaultShade;
+        border: #ddd 1px solid;
+        text-align: left;
+        margin: $globalMargin;
+        background-color: white;
+        @extend .rw-widget-container;
+
+        .dates {
+            text-align: right;
+        }
+
+        .addresses {
+            
+            display: flex;
+            flex-direction: column;
+
+            > * {
+                flex-grow: 1;
+            }
+
+        }
+
+        > .head {
+
+            display: flex;
+            flex-direction: row;
+
+            > *:first-child {
+                flex-grow: 1;
+                font-weight: bold;
+            }
+
+            > *:last-child {
+                color: $colorTextMinor;
+            }
+
+            > * {
+                padding: $globalMargin;
+            }
+
+            .icon {
+                margin: 0 4px 2px 0;
+            }
+
+        }
+
+        > .body {
+            
+            display: flex;
+            flex-direction: row;
+
+            .buttons {
+                flex-grow: 1;
+                text-align: right;
+            }
+
+        }
+
+        > *:not(:first-child) {
+            padding: $globalMargin;
+            word-break: break-word;
+        }
+
+    }
+
+}

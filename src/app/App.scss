@@ -1,0 +1,163 @@
+$font-path: '~react-widgets/lib/fonts';
+$img-path: '~react-widgets/lib/img';
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+@import '~react-widgets/lib/scss/react-widgets';
+@import "./Const.scss";
+@import "./Icons.scss";
+
+html, body {
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    font-family: 'Noto Serif', serif;
+    text-shadow: 1px 1px 1px white;
+}
+
+img {
+    max-width: 100%;
+    width: 400px;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.standard-padding {
+    padding: $globalMargin;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.subtext {
+    color: gray;
+    font-size: small;
+}
+
+#app {
+
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > .page {
+        
+        justify-content: center;
+        flex-direction: column;
+        flex-grow: 1;
+        display: flex;
+
+    }
+
+}
+
+.buttons {
+
+    > input {
+        margin: $globalMargin !important;
+        box-shadow: $defaultShade !important;
+    }
+
+}
+
+.justified {
+    text-align: justify;
+}
+
+.agreement-status-active, .state-positive {
+    color: #00bd00;
+}
+
+.agreement-status-completed {
+    color: #ff9b00;
+}
+
+.agreement-status-canceled, .state-negative {
+    color: #f55;
+}
+
+strong {
+    margin: 0;
+}
+
+.form-input {
+
+    display: flex;
+    flex-direction: column;
+
+    .label {
+        padding: 0 $globalMargin;
+        font-size: small;
+        color: gray;
+    }
+
+    > *:not(.label) {
+
+        > * {
+            margin: $globalMargin;
+            margin-top: 0;
+        }
+
+    }
+
+    &.double > * {
+
+        display: flex;
+
+        > :first-child {
+            flex-basis: 50%;
+            flex-grow: 1;
+        }
+
+        > :last-child {
+            flex-basis: 50%;
+            flex-grow: 1;
+        }
+
+    }
+
+}
+
+.single-input {
+
+    > * {
+        margin: $globalMargin !important;
+    }
+
+}
+
+input[type=submit] {
+    
+    @extend .rw-widget-container, .rw-widget-picker, .rw-widget-input, .rw-input;
+    cursor: pointer !important;
+    // font-weight: bold;
+    background: #007eff;
+    color: white;
+    border: none;
+    -webkit-appearance: none;
+
+    &.negative {
+        background-color: #ff7985;
+    }
+
+    &.warning {
+        background-color: #ffbe00;
+    }
+
+}

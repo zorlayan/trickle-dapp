@@ -1,0 +1,22 @@
+@import "../Const.scss";
+
+.index.page {
+
+    > h1 {
+        margin-bottom: 0;
+    }
+
+    .logo {
+        margin-top: 5vh;
+    }
+
+    .token-progress-bar {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    .buttons > * {
+        margin: $globalMargin;
+    }
+
+}
